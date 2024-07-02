@@ -1,4 +1,4 @@
-# AppComparadorVideojuegos
+# AppComparadorVideojuegos <img src="src\main\resources\static\LOGO.jpeg" alt="Logo" width="80" align="right">
 Aplicacion desarrollada junto a un compañero para comparar precios de videojuegos en distintas plataformas.
 
 ## Video Demostrativo
