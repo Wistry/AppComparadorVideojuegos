@@ -30,7 +30,7 @@ El proyecto se basa en las siguientes funcionalidades principales:
 
 ## Contribuidores
 
-Este proyecto fue desarrollado en colaboración por Wistry y mi compañero de ISI. Ambos contribuimos en el diseño, implementación y mejora continua del proyecto.
+Este proyecto fue desarrollado en colaboración por Wistry y mi compañero de Ingenieria Informatica. Ambos contribuimos en el diseño, implementación y mejora continua del proyecto.
 
 ## Video Demostrativo
 
