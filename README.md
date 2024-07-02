@@ -7,6 +7,6 @@ A continuación se muestra una miniatura del video demostrativo de la app. Haz c
 
 <p align="center">
   <a href="https://youtu.be/95vYd36eLGM">
-    <img src="src\main\resources\static" alt="Video Demostrativo" width="100%">
+    <img src="src\main\resources\static\demo-priceplaypay.png" alt="Video Demostrativo" width="100%">
   </a>
 </p>
