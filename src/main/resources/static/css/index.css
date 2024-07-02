@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px; /* Ajusta este valor según la altura de tu header */
+    overflow-y: auto; /* Hace que main sea desplazable si el contenido es demasiado alto */
+    margin-bottom: 70px;
+}
+
+.logo {
+    width: 150px; 
+    height: auto; 
+    border: 2px solid #000; /* Cambia el color y el grosor del borde según tus preferencias */
+}
+
+header h1 {
+    margin: 0;
+}
+
+header img {
+    height: 50px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#buscador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    height: 25%;
+    margin: 5% ;
+    padding: 2%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+legend {
+    font-size: 1.2em; /* Tamaño de fuente para la leyenda */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 10px; /* Espacio inferior para separar del contenido */
+}
+
+button:hover {
+    background-color: grey;
+}
+
+#resultados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#resultados h2 {
+    grid-column: 1 / -1;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#resultados p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+#resultados strong {
+    font-weight: bold;
+}
+
+#resultados .juego {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+}

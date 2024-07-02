@@ -1,0 +1,23 @@
+runtime: java11
+entrypoint: 'java -jar target/ComparadorVideojuegos-1.1.jar'
+instance_class: F1
+
+handlers:
+- url: /
+  static_files: src/main/resources/templates/index.html
+  upload: src/main/resources/templates/index.html
+
+- url: /index.css
+  static_files: src/main/resources/static/css/index.css
+  upload: src/main/resources/static/css/index.css
+
+- url: /LOGO.jpeg
+  static_files: src/main/resources/static/LOGO.jpeg
+  upload: src/main/resources/static/LOGO.jpeg
+
+- url: /.*
+  script: this field is required, but ignored
+  secure: always
+
+env_variables:
+  SPRING_PROFILES_ACTIVE: "default"

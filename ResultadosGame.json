@@ -1,0 +1,245 @@
+{
+  "name": "Game",
+  "juegos": [
+    {
+      "_name": "S.T.A.L.K.E.R. 2 Heart of Chornobyl",
+      "_precio": "3"
+    },
+    {
+      "_name": "Titan Quest 2",
+      "_precio": "3"
+    },
+    {
+      "_name": "Gothic",
+      "_precio": "3"
+    },
+    {
+      "_name": "Vampire The Masquerade - Bloodlines 2 Unsanctioned Edition",
+      "_precio": "3"
+    },
+    {
+      "_name": "Homeworld 3 Collector´s Edition",
+      "_precio": "199.99"
+    },
+    {
+      "_name": "EA Sports FC 24",
+      "_precio": "49.99"
+    },
+    {
+      "_name": "Igor The Game",
+      "_precio": "19.94"
+    },
+    {
+      "_name": "Farming Simulator 22: Premium Edition",
+      "_precio": "39.99"
+    },
+    {
+      "_name": "Robocop Rogue City",
+      "_precio": "49.99"
+    },
+    {
+      "_name": "Starfield",
+      "_precio": "64.99"
+    },
+    {
+      "_name": "Neopets Puzzle Adventure",
+      "_precio": "1"
+    },
+    {
+      "_name": "Star Wars Jedi Survivor",
+      "_precio": "59.99"
+    },
+    {
+      "_name": "Los Sims 4 Creciendo en Familia Pack de Expansión",
+      "_precio": "39.99"
+    },
+    {
+      "_name": "Tekken 8 Launch Edition",
+      "_precio": "59.99"
+    },
+    {
+      "_name": "Dead Space Remake",
+      "_precio": "49.99"
+    },
+    {
+      "_name": "High School Musical 3 Fin de Curso: Dance",
+      "_precio": "1"
+    },
+    {
+      "_name": "Alone in the Dark",
+      "_precio": "54.99"
+    },
+    {
+      "_name": "One Piece Odyssey Collector",
+      "_precio": "89.99"
+    },
+    {
+      "_name": "Need For Speed Unbound",
+      "_precio": "29.99"
+    },
+    {
+      "_name": "Dead Island 2 PULP Edition",
+      "_precio": "29.99"
+    },
+    {
+      "_name": "Goat Simulator 3 Pre Udder Edition",
+      "_precio": "24.99"
+    },
+    {
+      "_name": "Football Manager 2023",
+      "_precio": "59.99"
+    },
+    {
+      "_name": "Alone in the Dark Edición Coleccionista",
+      "_precio": "199.99"
+    },
+    {
+      "_name": "FIFA 23",
+      "_precio": "29.99"
+    },
+    {
+      "_name": "Tekken 8 Ultimate Edition",
+      "_precio": "99.99"
+    },
+    {
+      "_name": "SESSION Skate Sim",
+      "_precio": "8.99"
+    },
+    {
+      "_name": "Cyberpunk 2077 Ultimate Edition",
+      "_precio": "59.99"
+    },
+    {
+      "_name": "Pro Cycling Manager 2022",
+      "_precio": "6.99"
+    },
+    {
+      "_name": "Vampire the Masquerade Swansong",
+      "_precio": "8.99"
+    },
+    {
+      "_name": "Teenage Mutant Ninja Turtles Shredder´s Revenge Signature Edition",
+      "_precio": "54.99"
+    },
+    {
+      "_name": "Total War Warhammer Trilogy",
+      "_precio": "59.99"
+    },
+    {
+      "_name": "Farming Simulator 22: Premium Expansion",
+      "_precio": "19.99"
+    },
+    {
+      "_name": "The Invincible Signature Edition",
+      "_precio": "59.99"
+    },
+    {
+      "_name": "Total War Pharaoh Limited Edition",
+      "_precio": "54.99"
+    },
+    {
+      "_name": "Armored Core Vi Fires Of Rubicon Launch Edition",
+      "_precio": "54.99"
+    },
+    {
+      "_name": "The Guild 3",
+      "_precio": "29.99"
+    },
+    {
+      "_name": "Syberia The World before",
+      "_precio": "34.99"
+    },
+    {
+      "_name": "Pro Cycling Manager 23",
+      "_precio": "14.99"
+    },
+    {
+      "_name": "Park Beyond Day-1 Admission Ticket",
+      "_precio": "19.99"
+    },
+    {
+      "_name": "Park Beyond Impossified Edition",
+      "_precio": "39.99"
+    },
+    {
+      "_name": "The Lord of the Rings Gollum",
+      "_precio": "9.99"
+    },
+    {
+      "_name": "F1 2021",
+      "_precio": "22.99"
+    },
+    {
+      "_name": "Biomutant",
+      "_precio": "4.99"
+    },
+    {
+      "_name": "Imperivm HD Edición Coleccionista",
+      "_precio": "39.99"
+    },
+    {
+      "_name": "Chorus Day One Edition",
+      "_precio": "14.99"
+    },
+    {
+      "_name": "Farming Simulator 22 Edicion Coleccionista",
+      "_precio": "39.99"
+    },
+    {
+      "_name": "Doom Slayers Collection",
+      "_precio": "54.95"
+    },
+    {
+      "_name": "FIFA 22",
+      "_precio": "22.99"
+    },
+    {
+      "_name": "Saints Row Notorious Edition",
+      "_precio": "24.99"
+    },
+    {
+      "_name": "Los Sims 4: Ambiente Acogedor",
+      "_precio": "7.99"
+    },
+    {
+      "_name": "Life is Strange True Colors",
+      "_precio": "14.99"
+    },
+    {
+      "_name": "Los Sims 4 vida en el pueblo: Pack de expansion",
+      "_precio": "19.99"
+    },
+    {
+      "_name": "The Medium Two Worlds Special Editon",
+      "_precio": "54.95"
+    },
+    {
+      "_name": "Farming Simulator 22: Platinum Edition",
+      "_precio": "14.99"
+    },
+    {
+      "_name": "Farming Simulator 22 Platinum Expansion",
+      "_precio": "9.99"
+    },
+    {
+      "_name": "Pro Cycling Manager 2021",
+      "_precio": "14.99"
+    },
+    {
+      "_name": "Farming Simulator 22 Pumps N´ Hoses Pack",
+      "_precio": "17.99"
+    },
+    {
+      "_name": "Imperivm HD Edición Coleccionista XL Caja Metálica + USB",
+      "_precio": "59.99"
+    },
+    {
+      "_name": "Train Life a Railway Simulator",
+      "_precio": "29.99"
+    },
+    {
+      "_name": "MotoGP 21",
+      "_precio": "14.99"
+    }
+  ]
+}

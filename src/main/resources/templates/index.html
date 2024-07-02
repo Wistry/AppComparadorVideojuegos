@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PricePlayPay</title>
+    <link rel="stylesheet" type="text/css" href="/index.css">
+</head>
+<body>
+    <header>
+        <h1>PricePlayPay</h1>
+        <img class="logo" src="/LOGO.jpeg" alt="Logo">
+    </header>
+    <main>
+        <div class="loading" id="loading" style="display: none;">Cargando...</div>
+
+        <section id="buscador">
+            <form id="searchForm">
+                <fieldset>
+                    <legend>BUSCADOR</legend>
+                    <input type="text" id="gameName" name="gameName" placeholder="Escribe el nombre del juego" required>
+                    <button type="submit">Enviar</button>
+                    <button type="button" class="clear" onclick="clearInput()">Vaciar</button>
+                    <button type="button" onclick="showGamesgame()">Mostrar Juegos Game</button>
+                    <button type="button" onclick="showGamesinstantgaming()">Mostrar Juegos InstantGaming </button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        Creado por Antonio Hernandez Garcia y William Patrick Quinn Cortes
+    </footer>
+
+    <script>
+        function clearInput() {
+            document.getElementById("gameName").value = "";
+            let resultadosDiv = document.getElementById('resultados');
+            if (resultadosDiv) {
+                resultadosDiv.remove();
+            }
+        }
+
+        document.getElementById('searchForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const gameName = document.getElementById('gameName').value;
+            const loadingDiv = document.getElementById('loading');
+            loadingDiv.style.display = 'flex';  // Mostrar el indicador de carga
+
+            try {
+                const response = await fetch(`/cheapshark?gameName=${gameName}`);
+                loadingDiv.style.display = 'none';  // Ocultar el indicador de carga
+
+                let resultadosDiv = document.getElementById('resultados');
+                if (!resultadosDiv) {
+                    resultadosDiv = document.createElement('div');
+                    resultadosDiv.id = 'resultados';
+                    document.getElementById('buscador').appendChild(resultadosDiv);
+                }
+
+                if (response.ok) {
+                    const data = await response.json();
+                    resultadosDiv.innerHTML = '<h2>Resultado</h2>';
+
+                    console.log(data);  // Log para verificar la estructura de los datos
+
+                    // CheapShark Result
+                    if (data[0] && data[0].precio !== "N/A") {
+                        resultadosDiv.innerHTML += `
+                        <section class="juego">
+                            <p><strong>Nombre:</strong> ${data[0].name}</p>
+                            <p><strong>Precio:</strong> ${data[0].precio}</p>
+                            <p><strong>Plataforma:</strong> CheapShark</p>
+                        </section>
+                        `;
+                    } else {
+                        resultadosDiv.innerHTML += `
+                            <section class="juego">
+                                <p><strong>Juego:</strong> No encontrado.</p>
+                                <p><strong>Plataforma:</strong> CheapShark.</p>
+                            </section>`;
+                    }
+
+                    // Game Result
+                    if (data[1] && data[1].precio !== "N/A") {
+                        resultadosDiv.innerHTML += `
+                        <section class="juego">
+                            <p><strong>Nombre:</strong> ${data[1].name}</p>
+                            <p><strong>Precio:</strong> ${data[1].precio}</p>
+                            <p><strong>Plataforma:</strong> Game</p>
+                        </section>
+                        `;
+                    } else {
+                        resultadosDiv.innerHTML += `
+                            <section class="juego">
+                                <p><strong>Juego:</strong> No encontrado.</p>
+                                <p><strong>Plataforma:</strong> Game.</p>
+                            </section>
+                        `;
+                    }
+
+                    // InstantGaming Result
+                    if (data[2] && data[2].precio !== "N/A") {
+                        resultadosDiv.innerHTML += `
+                        <section class="juego">
+                            <p><strong>Nombre:</strong> ${data[2].name}</p>
+                            <p><strong>Precio:</strong> ${data[2].precio}</p>
+                            <p><strong>Plataforma:</strong> InstantGaming</p>
+                        </section>
+                        `;
+                    } else {
+                        resultadosDiv.innerHTML += `
+                            <section class="juego">
+                                <p><strong>Juego:</strong> No encontrado.</p>
+                                <p><strong>Plataforma:</strong> InstantGaming.</p>
+                            </section>
+                        `;
+                    }
+                } else {
+                    console.error('Error: response not ok');
+                    resultadosDiv.textContent = 'Error al obtener los datos';
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                let resultadosDiv = document.getElementById('resultados');
+                if (!resultadosDiv) {
+                    resultadosDiv = document.createElement('div');
+                    resultadosDiv.id = 'resultados';
+                    document.getElementById('buscador').appendChild(resultadosDiv);
+                }
+                resultadosDiv.textContent = 'Error al obtener los datos';
+                loadingDiv.style.display = 'none';  // Ocultar el indicador de carga
+            }
+        });
+
+        async function showGamesgame() {
+            const loadingDiv = document.getElementById('loading');
+            loadingDiv.style.display = 'flex';  // Mostrar el indicador de carga
+        
+            try {
+                const response = await fetch(`/Gamesgame`);
+                loadingDiv.style.display = 'none';  // Ocultar el indicador de carga
+        
+                let resultadosDiv = document.getElementById('resultados');
+                if (!resultadosDiv) {
+                    resultadosDiv = document.createElement('div');
+                    resultadosDiv.id = 'resultados';
+                    document.getElementById('buscador').appendChild(resultadosDiv);
+                }
+        
+                if (response.ok) {
+                    const data = await response.json();
+                    resultadosDiv.innerHTML = '<h2>Todos los Juegos de Game</h2>';
+        
+                    console.log(data);  // Log para verificar la estructura de los datos
+        
+                    data.forEach(juego => {
+                        if (juego.precio !== "N/A") {
+                            resultadosDiv.innerHTML += `
+                            <section class="juego">
+                                <p><strong>Nombre: </strong> ${juego.name} </p>
+                                <p><strong>Precio: </strong> ${juego.precio} </p>
+                            </section>
+                            `;
+                        }
+                    });
+                } 
+                else {
+                    console.error('Error: response not ok, status:', response.status, 'status text:', response.statusText);
+                    resultadosDiv.textContent = 'Error al obtener los datos: ' + response.status + ' ' + response.statusText;
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                let resultadosDiv = document.getElementById('resultados');
+                if (!resultadosDiv) {
+                    resultadosDiv = document.createElement('div');
+                    resultadosDiv.id = 'resultados';
+                    document.getElementById('buscador').appendChild(resultadosDiv);
+                }
+                resultadosDiv.textContent = 'Error al obtener los datos';
+                loadingDiv.style.display = 'none';  // Ocultar el indicador de carga
+            }
+        }
+
+        async function showGamesinstantgaming() {
+            const loadingDiv = document.getElementById('loading');
+            loadingDiv.style.display = 'flex';  // Mostrar el indicador de carga
+        
+            try {
+                const response = await fetch(`/Gamesinstantgaming`);
+                loadingDiv.style.display = 'none';  // Ocultar el indicador de carga
+        
+                let resultadosDiv = document.getElementById('resultados');
+                if (!resultadosDiv) {
+                    resultadosDiv = document.createElement('div');
+                    resultadosDiv.id = 'resultados';
+                    document.getElementById('buscador').appendChild(resultadosDiv);
+                }
+        
+                if (response.ok) {
+                    const data = await response.json();
+                    resultadosDiv.innerHTML = '<h2>Todos los Juegos de InstantGaming</h2>';
+        
+                    console.log(data);  // Log para verificar la estructura de los datos
+        
+                    data.forEach(juego => {
+                        if (juego.precio !== "N/A") {
+                            resultadosDiv.innerHTML += `
+                            <section class="juego">
+                                <p><strong>Nombre: </strong> ${juego.name}</p>
+                                <p><strong>Precio: </strong> ${juego.precio}</p>
+                            </section>
+                            `;
+                        } 
+                    });
+                }  else {
+                    console.error('Error: response not ok, status:', response.status, 'status text:', response.statusText);
+                    resultadosDiv.textContent = 'Error al obtener los datos: ' + response.status + ' ' + response.statusText;
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                let resultadosDiv = document.getElementById('resultados');
+                if (!resultadosDiv) {
+                    resultadosDiv = document.createElement('div');
+                    resultadosDiv.id = 'resultados';
+                    document.getElementById('buscador').appendChild(resultadosDiv);
+                }
+                resultadosDiv.textContent = 'Error al obtener los datos';
+                loadingDiv.style.display = 'none';  // Ocultar el indicador de carga
+            }
+        }
+        
+    </script>
+</body>
+</html>
